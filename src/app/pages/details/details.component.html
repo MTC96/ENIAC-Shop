@@ -1,0 +1,55 @@
+<div class="min-height">
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-7 me-4 my-3">
+                <div class="img-container">
+                    <button class="btn" (click)="changeImage(-1)">
+                        <i class="bi bi-chevron-compact-left" style="font-size: 50px;"></i>
+                    </button>
+                    <picture class="height">
+                        <img src="{{ pictures[index] }}" class="img-fluid rounded img-size" alt="">
+                    </picture>
+                    <button class="btn" (click)="changeImage(1)">
+                        <i class="bi bi-chevron-compact-right" style="font-size: 50px;"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col me-auto mt-5 ps-4 text-start soft-border">
+                <h3>{{ title }}</h3>
+                <h1 class="display-6 mb-2">{{ price | currency : 'COP' : 'symbol-narrow' : '1.0-0' }}</h1>
+                <p class="text-muted mb-3">Vendedor: {{ seller }}</p>
+                <p class="text-muted mb-3">Cantidad disponible: {{ available_quantity }}</p>
+                <p class="text my-3">{{ discount_string }}</p>
+                <p class="text my-3">
+                    <i class="bi bi-truck me-1"></i>
+                    <small>Envío {{ free_shipping == true? 'gratis' : 'a acordar con el vendedor'}}</small>
+                </p>
+                <button class="btn btn-primary mt-3 col-12"
+                        data-bs-toggle="modal"
+                        data-bs-target="#cartModal"
+                        (click)="buy()">Comprar
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Comprar</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Artículo agregado al carrito.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir comprando</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" [routerLink]="['/cart']">Ir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

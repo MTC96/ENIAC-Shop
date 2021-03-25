@@ -1,0 +1,37 @@
+#searchInput {
+    margin-right: -42px;
+    padding-right: 53px;
+}
+#searchButton {
+    align-items: center;
+    margin-block: 2px;
+    border: 0px;
+    border-left: 1px solid;
+    border-image:
+        radial-gradient(
+            circle,
+            white,
+            rgb(185, 185, 185),
+            white
+        ) 1;
+}
+#cartButton {
+    border: 0px;
+    border-left: 1px solid;
+    border-image:
+        radial-gradient(
+            circle,
+            white,
+            rgb(185, 185, 185),
+            white
+        ) 1;
+}
+#searchButton:hover {
+    background-color: rgb(243, 243, 243);
+}
+#cartButton:hover {
+    background-color: #ecdf4c;
+}
+.navbar-brand:hover {
+    background-color: #ecdf4c;
+}

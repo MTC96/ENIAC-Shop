@@ -1,0 +1,17 @@
+<div class="row my-3">
+    <div class="col-12 text-center">
+        <a (click)="changePage(-20)" class="btn btn-light disabled" *ngIf="page==1">
+            <i class="bi bi-arrow-left-short d-flex align-items-center"></i>
+        </a>
+        <a (click)="changePage(-20)" class="btn btn-light" *ngIf="page!=1">
+            <i class="bi bi-arrow-left-short d-flex align-items-center"></i>
+        </a>
+        <a class="btn disabled px-3">{{ page }}</a>
+        <a (click)="changePage(20)" class="btn btn-light disabled" *ngIf="page==51">
+            <i class="bi bi-arrow-right-short d-flex align-items-center"></i>
+        </a>
+        <a (click)="changePage(20)" class="btn btn-light" *ngIf="page!=51">
+            <i class="bi bi-arrow-right-short d-flex align-items-center"></i>
+        </a>
+    </div>
+</div>

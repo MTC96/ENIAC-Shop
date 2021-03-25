@@ -1,0 +1,21 @@
+.bi {
+    color: gray;
+    font-size: 25px
+}
+
+.btn.disabled{
+    margin-inline: -1px;
+    border-block: 0px;
+    border-inline: 1px solid;
+    border-image:
+        radial-gradient(
+            circle,
+            white,
+            gray,
+            white
+        ) 1;
+}
+
+.btn.btn-light:hover {
+    background-color: rgb(243, 243, 243);
+}

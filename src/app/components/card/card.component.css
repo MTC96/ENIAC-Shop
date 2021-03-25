@@ -1,0 +1,30 @@
+.card {
+    width: 18rem;
+    height: 416px;
+    overflow: hidden;
+    transition: all .2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 9px 13px #b6b6b6;
+}
+
+.card-img-top {
+    height: 18rem;
+    object-fit: contain;
+    border-bottom: 1px solid;
+    border-image:
+        radial-gradient(
+            circle,
+            white,
+            rgb(214, 214, 214) 70%,
+            white
+        ) 1;
+}
+
+.card-text {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

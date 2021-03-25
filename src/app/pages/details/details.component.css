@@ -1,0 +1,35 @@
+.soft-border {
+    border-left: 1px solid;
+    border-image:
+        radial-gradient(
+            circle,
+            white,
+            rgb(190, 190, 190) 70%,
+            white
+        ) 1;
+}
+
+.text.my-3 {
+    color: rgb(79, 197, 0);
+}
+
+.min-height {
+    min-height: 88vh;
+}
+
+.height {
+    display: flex;
+    align-items: center;
+    height: 465px;
+}
+
+.img-size {
+    height: auto;
+    width: auto;
+}
+
+.img-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

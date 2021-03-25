@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <app-paginator (offsetOut)="loadProductsBySearch(query, $event)"
+                   [offset]="offset"
+                   [page]="page">
+    </app-paginator>
+    <div class="row mx-4">
+        <div class="col" *ngFor="let product of products">
+            <app-card [id]="product.id"
+                      [thumbnail]="product.thumbnail"
+                      [title]="product.title"
+                      [price]="product.price | currency"
+                      [seller_nick]="product.seller_nick">
+            </app-card>
+        </div>
+    </div>
+    <app-paginator (offsetOut)="loadProductsBySearch(query, $event)"
+                   [offset]="offset"
+                   [page]="page">
+    </app-paginator>
+</div>

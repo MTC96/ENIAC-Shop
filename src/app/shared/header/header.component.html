@@ -1,0 +1,27 @@
+<header class="topbar">
+    <nav class="navbar navbar-expand-md navbar-light" style="background-color: #fff159;">
+        <div class="container-fluid">
+            <a class="btn navbar-brand" [routerLink]="['/dashboard']">
+                <img src="../../../assets/images/favicon.png" alt="" width="30" height="30"
+                    class="d-inline-block align-text-top">
+                ENIAC Shop
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-flex mx-auto w-25">
+                    <input class="form-control"
+                           id="searchInput"
+                           type="search"
+                           placeholder="Buscar"
+                           (keydown.enter)="search(txtQuery.value)"
+                           #txtQuery>
+                    <button class="btn d-flex" id="searchButton" (click)="search(txtQuery.value)" [routerLink]="'/dashboard'">
+                        <i class="bi bi-search d-flex align-items-center" style="color: #c5c8cc;"></i>
+                    </button>
+                </div>
+                <a class="btn d-flex" id="cartButton" [routerLink]="['/cart']">
+                    <i class="bi bi-cart-fill d-flex" style="font-size: 25px"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
